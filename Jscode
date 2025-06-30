@@ -1,0 +1,18 @@
+let globalVar = "I am global"; // Global variable
+
+function testScope() {
+    let functionVar = "I am inside a function"; // Function scope
+
+    if (true) {
+        let blockVar = "I am inside if block"; // Block scope
+        console.log(blockVar); // Works: accessible inside the if block
+    }
+
+    console.log(functionVar); // Works: accessible inside the function
+    // console.log(blockVar); // Error: blockVar is not accessible outside the block
+}
+
+testScope();
+
+console.log(globalVar); // Works: global variable
+// console.log(functionVar); // Error: functionVar is not accessible outside the function
